@@ -1,0 +1,56 @@
+[
+  // Swap the keybindings for paste and paste_and_indent
+  { "keys": ["super+v"], "command": "paste_and_indent" },
+  { "keys": ["super+shift+v"], "command": "paste" },
+  // Replace default select above/below line shortcut
+  { "keys": ["super+alt+up"], "command": "select_lines", "args": {"forward": false} },
+  { "keys": ["super+alt+down"], "command": "select_lines", "args": {"forward": true} },
+  // Replace default sublime tab switching
+  { "keys": ["ctrl+tab"], "command": "next_view" },
+  { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+  //Settings for AlignTab package
+  {
+    "keys": ["control+alt+;"], "command": "align_tab",
+    "args" : {
+      "user_input" : ":/f",
+    }
+  },
+  {
+    "keys": ["control+alt+="], "command": "align_tab",
+    "args" : {
+      "user_input" : "=/f",
+    }
+  },
+  {
+    "keys": ["control+alt+."], "command": "align_tab",
+    "args" : {
+      "user_input" : "=>/f",
+    }
+  },
+  // Settings for babel snippets package (wrap in component)
+  {
+    "keys": ["ctrl+shift+,"],
+    "command": "insert_snippet",
+    "args": {
+      "name": "Packages/Babel Snippets/react_wrap.sublime-snippet"
+    }
+  },
+  {
+      "keys": [
+          "super+shift+g"
+      ], 
+      "command": "wrap_as_you_type", 
+      "context": [
+          {
+              "operand": false, 
+              "operator": "equal", 
+              "match_all": true, 
+              "key": "setting.is_widget"
+          }, 
+          {
+              "match_all": true, 
+              "key": "emmet_action_enabled.wrap_as_you_type"
+          }
+      ]
+  }
+]
