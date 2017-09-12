@@ -27,30 +27,4 @@
       "user_input" : "=>/f",
     }
   },
-  // Settings for babel snippets package (wrap in component)
-  {
-    "keys": ["ctrl+shift+,"],
-    "command": "insert_snippet",
-    "args": {
-      "name": "Packages/Babel Snippets/react_wrap.sublime-snippet"
-    }
-  },
-  {
-      "keys": [
-          "super+shift+g"
-      ], 
-      "command": "wrap_as_you_type", 
-      "context": [
-          {
-              "operand": false, 
-              "operator": "equal", 
-              "match_all": true, 
-              "key": "setting.is_widget"
-          }, 
-          {
-              "match_all": true, 
-              "key": "emmet_action_enabled.wrap_as_you_type"
-          }
-      ]
-  }
 ]
